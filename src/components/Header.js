@@ -1,21 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import MenuIcon from '@mui/icons-material/Menu';
+import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
 
 function Header() {
   return ( 
     <Container>
-    <Logo>
-    </Logo>
-    {/* <ul className = "app__navbar-links">
-      <li className = "p__opensans"><a href="#inicio">Inicio</a></li>
-      <li className = "p__opensans"><a href="#sobre">Servicios</a></li>
-      <li className = "p__opensans"><a href="#exposiciones">Exposiciones</a></li>
-    </ul>
-    <div className = "app__navbar-galeria">
-      <a href="#galeria" className='p__opensans'>Galería</a>
-      <div/>
-      <a href="#contacto" className="p__opensans">Contacto</a>
-    </div> */}
+      <a>
+        <img src="/images/david.png" alt="logo"/>
+      </a>
+    <Menu>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Servicios</a>
+      <a href="#exposiciones">Exposiciones</a>
+    </Menu>
+    <MenuRight>
+      <a href="#galeria" >Galería</a>
+      <div/> 
+      <a href="#contacto" >Contacto</a>
+      {<CustomIcon /> }
+    </MenuRight>
+    
+     
     </Container>)
 
 }
@@ -23,17 +29,55 @@ function Header() {
 export default Header;
 
 const Container = styled.div` 
-  width:100%;
+  min-height: 60px;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--color-black);
-  padding: 1rem 2rem;
-`;
-const Logo = styled.div`
-  background-image: url('/images/david.png');
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  padding: 0px 20px;
+  background-color: black;
+  right: 0;
+  left: 0;
+  top: 0;
 `;
 
+const Menu = styled.div`    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 10px;
+    flex-wrap: nowrap;
+  }
+  @media(max-width: 820px) {
+    display: none;
+  }
+`;
+const MenuRight = styled.div`    
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+ 
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+    flex-wrap: nowrap;
+  }
+  div{
+    width: 1px;
+    min-height: 18px;
+    background: rgba(220,202,135,1);
+    margin-right: 10px;
+  }
+  transition: 0.5s ease;
+  a:hover {
+    border-bottom: 1px solid rgba(220,202,135,1);
+  }
+`;
+ const CustomIcon = styled(MenuIcon)` 
+  cursor: pointer;
+ `;

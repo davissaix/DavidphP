@@ -59,7 +59,7 @@ const Wrap = styled.div`
   overflow: hidden;
   
  
-  padding-top: 2vh;
+  padding-top: 13vh;
   @media (max-width: 820px) {
     flex-direction: column;
 
@@ -127,7 +127,7 @@ const OneButton = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  opacity: 0.85;
+  opacity: none;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: bold;
@@ -174,6 +174,7 @@ const OneButton = styled.div`
 
     const Texth2 = styled.div`  
     padding-bottom: 10vh;
+    
     `;
     const TextP = styled.div`   
       text-indent: 2rem;
