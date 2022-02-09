@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
-  color: #f0e6e6;
+  
   margin: 0;
   padding: 0;
 }
@@ -13,9 +13,7 @@ body {
 a{
   text-decoration: none;
 }
-a:hover{
-  color:rgb(173, 173, 173);
-}
+
 @keyframes animateDown{
 0%, 20%, 50%, 80%, 100% {
   transform: translateY(0);

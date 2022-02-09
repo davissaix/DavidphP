@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
+import ImagenSlider from './ImagenSlider';
 
 
 
@@ -38,8 +39,7 @@ function Section( {backgroundColor, title, subtitle, description, onebtn, imageS
         
         </ItemText>
         <WrapImg>
-            <Imagen imgSection = {imageSection} bgPosition = {backgroundPosition}>
-            </Imagen>
+            <ImagenSlider/>
         </WrapImg>
       
       
@@ -142,41 +142,49 @@ const OneButton = styled.div`
   cursor: pointer;
   `;
 
-  const Imagen = styled.div`
-    // background-image: url('/images/hot.jpg');
-    background-size: cover;
-    background-position: ${props => props.bgPosition}; 
-    background-repeat: no-repeat;
-    height: 213px;
-    width: 320px;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    margin-right: 3vw;
-    background-image: ${props => `url('images/${props.imgSection}')`};
-  @media (min-width: 420px) {
-    width: 410px;
-    height: 277px;
-  }
-  @media (min-width: 500px) {
-    width: 460px;
-    height: 306px;
-  }
-  @media (min-width: 680px) {
-    width: 500px;
-    height: 333px;
-  }
-  @media (min-width: 820px) {
-    width: 55vw;
-  }
-  @media (min-width: 900px) {
-    width: 50vw;
-  }
-  @media (min-width: 900px) {
-    width: 45vw;
-  }
-    `;
+//   const Imagen = styled.div`
+//     // background-image: url('/images/hot.jpg');
+//     background-size: cover;
+//     background-position: ${props => props.bgPosition}; 
+//     background-repeat: no-repeat;
+//     height: 213px;
+//     width: 320px;
+//     display: flex;
+//     justify-content: start;
+//     align-items: start;
+//     margin-right: 3vw;
+//     background-image: ${props => `url('images/${props.imgSection}')`};
+//   @media (min-width: 420px) {
+//     width: 410px;
+//     height: 277px;
+//   }
+//   @media (min-width: 500px) {
+//     width: 460px;
+//     height: 306px;
+//   }
+//   @media (min-width: 680px) {
+//     width: 500px;
+//     height: 333px;
+//   }
+//   @media (min-width: 820px) {
+//     width: 55vw;
+//   }
+//   @media (min-width: 900px) {
+//     width: 50vw;
+//   }
+//   @media (min-width: 900px) {
+//     width: 45vw;
+//   }
+//     `;
     const WrapImg = styled.div` 
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 820px) {
+    justify-content: flex-end;
+    padding-right: 3vw;
+    }
+   
     
     `; 
 
