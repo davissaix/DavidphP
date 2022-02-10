@@ -4,6 +4,8 @@ import Header from './Header';
 import Section from './Section';
 import ImagenSlider from './ImagenSlider';
 import SectionCopy from './SectionCopy';
+import Email from './Email';
+import Footer from './Footer';
 
 
 
@@ -21,7 +23,7 @@ function Home() {
            onebtn="Hablemos"
             imageSection= "hot.jpg"
        />  
-       <Section 
+       <Section id='servicios'
         backgroundColor = "black"
         title="Servicios: Fotógrafía de Modas"
            subtitle="Moda y catalogos"
@@ -60,8 +62,9 @@ function Home() {
             subtitle="Slider de imagenes fotograficas"
             description="Aquí podrás ver una galería de imagenes fotográficas de mi trabajo"
             onebtn="Contáctame"
-          
-       />
+         />
+         <Email/>
+         <Footer/>
     </Container>
     ) 
 }

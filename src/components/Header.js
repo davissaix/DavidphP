@@ -7,13 +7,13 @@ import CloseIcon from '@mui/icons-material/Close';
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
   return ( 
-    <Container>
+    <Container id='contHeader'>
       <a>
         <img src="/images/david.png" alt="logo"/>
       </a>
     <Menu>
       <a href="#inicio">Inicio</a>
-      <a href="#sobre">Servicios</a>
+      <a href="#servicios">Servicios</a>
       <a href="#exposiciones">Exposiciones</a>
     </Menu>
     <MenuRight>
