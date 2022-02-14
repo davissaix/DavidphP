@@ -8,13 +8,13 @@ import ImagenSlider from './ImagenSlider';
 
 function Section( {backgroundColor, title, subtitle, description, onebtn, imageSection, backgroundPosition}) {
   return (
-    <Wrapper bgColor = {backgroundColor}>
+    <Wrapper id='galeria' bgColor = {backgroundColor}>
       <Wrap >
         <ItemText>
           <Textgroup>
           <Fade left>
           <Texth2>
-              <h2>  
+              <h2 >  
                   {title} <br/>
               </h2>
               <h4>
@@ -31,9 +31,12 @@ function Section( {backgroundColor, title, subtitle, description, onebtn, imageS
           </Textgroup>   
           <Fade bottom>
           <OneButtonGroup>
-            <OneButton>
+          <OneButton > 
+              <a href='#contacto'>
               {onebtn}
-            </OneButton>       
+              </a>
+              
+            </OneButton>         
           </OneButtonGroup>
           </Fade>     
         

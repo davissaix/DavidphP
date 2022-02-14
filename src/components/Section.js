@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
+import Header from './Header';
+import Home from './Home';
 
 
 
 
-function Section( {backgroundColor, title, subtitle, description, onebtn, imageSection, backgroundPosition}) {
+function Section ( {backgroundColor, title, subtitle, description, onebtn, imageSection, backgroundPosition, seccion }) {
   return (
-    <Wrapper bgColor = {backgroundColor}>
+    <Wrapper id={seccion} bgColor = {backgroundColor} >
       <Wrap >
         <ItemText>
           <Textgroup>
@@ -30,8 +32,11 @@ function Section( {backgroundColor, title, subtitle, description, onebtn, imageS
           </Textgroup>   
           <Fade bottom>
           <OneButtonGroup>
-            <OneButton>
+            <OneButton > 
+              <a href='#contacto'>
               {onebtn}
+              </a>
+              
             </OneButton>       
           </OneButtonGroup>
           </Fade>     
@@ -123,6 +128,9 @@ const OneButtonGroup = styled.div`
  @media (min-width: 820px) {
   padding: 5vh 0 0 0;
 }
+@media (max-width: 820px) {
+  padding: 2vh 0 0 0;
+}
 
 `;
 
@@ -188,6 +196,7 @@ const OneButton = styled.div`
       text-indent: 2rem;
       text-align: justify;
       line-height: 1.5;
+     
     `;
     const DownArrow = styled.img`   
       animation: animateDown infinite 1.5s;

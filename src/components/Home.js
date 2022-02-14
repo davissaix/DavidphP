@@ -11,9 +11,10 @@ import Footer from './Footer';
 
 
 function Home() {
+    
   return(
     <Container>
-        <Header />
+        <Header  />
        <Section 
            backgroundColor = "none"
            title="David Ph Paris"
@@ -22,14 +23,17 @@ function Home() {
            Si quieres mas información sobre mis servicios no dudes en escribirme."
            onebtn="Hablemos"
             imageSection= "hot.jpg"
+            seccion = "inicio"
        />  
-       <Section id='servicios'
+       
+       <Section 
         backgroundColor = "black"
         title="Servicios: Fotógrafía de Modas"
            subtitle="Moda y catalogos"
            description="Fotografía de prensa, en eventos de moda, desfiles, eventos sociales, creación de catalogos para ropa urbana, vestido de baño, ropa interior."
            onebtn="Contáctame"
             imageSection= "moda.jpg"
+            seccion="servicios"
        />  
        <Section 
            backgroundColor = "none"
@@ -47,6 +51,7 @@ function Home() {
            onebtn="Escríbeme"
             imageSection= "beach.png"
        />  
+       
        <Section 
            backgroundColor = "none"
            title="Exposiciones"
@@ -55,6 +60,7 @@ function Home() {
            onebtn="Saber Más"
             imageSection= "expos.jpg"
             backgroundPosition = "right"
+            seccion="exposiciones"
        />  
          <SectionCopy
             backgroundColor = "black"
@@ -78,6 +84,8 @@ min-height: 500px;
     background-position: center;
     
     background-attachment: fixed;  
-  
+  .serv{
+      display:none;
+  }
     
 `;

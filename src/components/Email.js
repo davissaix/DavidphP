@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 
 
-function Email() {
+function Email () {
   return (
-  <Container>
+  <Container id='contacto' >
       <Form> 
           <Divo>
-            <h2>Contacto</h2>    
-            <div className="line"/>
+            <h2  >Contacto</h2>    
+            <div   className="line"/>
           </Divo>
           
           <h1>Escríbeme al siguiente correo </h1>

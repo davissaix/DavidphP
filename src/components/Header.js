@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState} from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
+import Email from './Email';
+import Section from './Section';
+import Home from './Home';
+import SectionCopy from './SectionCopy';
+
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
@@ -14,7 +19,7 @@ function Header() {
     <Menu>
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
-      <a href="#exposiciones">Exposiciones</a>
+      <a href="#exposiciones" >Exposiciones</a>
     </Menu>
     <MenuRight>
       <a className='derecho' href="#galeria" >Galería</a>
@@ -27,11 +32,11 @@ function Header() {
         <CustomClose onClick={()=> setBurgerStatus(false)}/>
       </CloseWrapper>
      
-      <li><a href='#'> Inicio </a></li>
-      <li><a href='#'> Servicios </a></li>
-      <li><a href='#'> Exposiciones </a></li>
-      <li><a href='#'> Galería </a></li>
-      <li><a href='#'> Contacto </a></li>
+      <li><a href='#inicio'> Inicio </a></li>
+      <li><a href='#servicios'> Servicios </a></li>
+      <li><a href='#exposiciones'> Exposiciones </a></li>
+      <li><a href='#galeria'> Galería </a></li>
+      <li><a href='#contacto'> Contacto </a></li>
     </BurgerNav>
     
      
